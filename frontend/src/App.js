@@ -73,7 +73,7 @@ class App extends React.Component{
           <form onSubmit={(e)=>this.submit(e,this.state.id)}>
             <div class="input-field col s12">
               <i class="material-icons prefix">content_paste</i>
-              <input onChange={(e)=>this.setState({name:e.target.value})} value={this.state.name} type="text" id="name" class="autocomplete"/>
+              <input onChange={(e)=>this.setState({name:e.target.value})} value={this.state.name} type="text" id="name" class="autocomplete" required/>
               <label for="name">Task Name</label>
             </div>
             <div class="input-field col s12">
@@ -83,7 +83,7 @@ class App extends React.Component{
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">assignment_turned_in</i>
-              <input onChange={(e)=>this.setState({status:e.target.value})} value={this.state.status} type="text" id="status" class="autocomplete"/>
+              <input onChange={(e)=>this.setState({status:e.target.value})} value={this.state.status} type="text" id="status" class="autocomplete" required/>
               <label for="status">Status</label>
             </div>
             <button class="btn waves-effect waves-light right" type="submit" name="action" style={{background: "#ed3b3b"}}>Submit
