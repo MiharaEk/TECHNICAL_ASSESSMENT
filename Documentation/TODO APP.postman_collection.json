@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "bc5484bb-8fda-43ec-8c66-feeb91b0c41d",
+		"name": "TODO APP",
+		"description": "#TODO App\nPerforms view,add,edit and delete functions using REST APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15409929"
+	},
+	"item": [
+		{
+			"name": "View Todo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View Todo",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "    {\r\n        \"id\": 56,\r\n        \"name\": \"Todo App Implementation\",\r\n        \"description\": \"Implement todo app with react and springboot\",\r\n        \"status\": \"Not Completed\"\r\n    }"
+				}
+			]
+		},
+		{
+			"name": "View Todo By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\": \"Test Todo\",\r\n        \"description\": \"Test\",\r\n        \"status\": \"Completed\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Todo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"Test Todo\",\r\n        \"description\": \"Test\",\r\n        \"status\": \"Completed\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "    {\r\n        \"name\": \"Sample Task\",\r\n        \"description\": \"Sample Task\",\r\n        \"status\": \"Completed\"\r\n    }"
+				}
+			]
+		},
+		{
+			"name": "Edit Todo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 60,\r\n    \"name\": \"Test Todo\",\r\n    \"description\": \"Test Todo\",\r\n    \"status\": \"Completed\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
